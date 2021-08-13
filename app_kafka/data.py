@@ -12,6 +12,3 @@ def get_data():
     random_sample = randint(0, length-1)
     message = {k: v for k, v in zip(data["feature_names"], data["data"][random_sample])}
     return message
-
-if __name__ == "__main__":
-    print(get_data())

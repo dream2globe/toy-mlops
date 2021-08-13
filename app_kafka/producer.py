@@ -15,7 +15,7 @@ def json_serializer(data):
     return json.dumps(data).encode("utf-8")
 
 def get_partition(key, all, available):
-    return 0 # 파티션을 특정할 수 있음
+    return 1 # 파티션을 특정할 수 있음
 
 producer = KafkaProducer(
     bootstrap_servers=["192.168.0.2:9092"],
