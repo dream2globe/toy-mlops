@@ -24,6 +24,7 @@ producer = KafkaProducer(
     partitioner=get_partition
 )
 
+
 if __name__ == "__main__":
     try:
         while True:
@@ -32,6 +33,6 @@ if __name__ == "__main__":
             producer.send("mlops", msg)
             time.sleep(1)
     except KeyboardInterrupt:
-        logger.info(f"stoped by a user")
+        logger.info(f"stopped by a user")
     finally:
         producer.close()
